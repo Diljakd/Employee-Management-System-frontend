@@ -15,12 +15,6 @@ export class EmployeeDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private employeService: EmployeeService) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
-
-    this.employee = new Employee();
-    this.employeService.getEmployeeById(this.id).subscribe( data => {
-      this.employee = data;
-    });
   }
 
 }
